@@ -1,0 +1,214 @@
+body {
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
+}
+
+.container { 
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-column-gap: 10px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+     }
+
+
+#banner {
+    position: relative;
+    overflow:hidden;
+    width:1000px;
+    background:url('../images/zima\ drink.jpg');
+    height:300px;
+
+    border:2px solid rgb(102, 101, 101);
+
+    grid-template-columns: 1/13;
+}
+
+
+.box1 {
+    position: absolute;
+    z-index:1;
+    top:100px;
+    width: 400px;
+    height: 200px;
+    font-size: 48px;
+  animation: leftOne 4s ease-out forwards;
+
+  }
+
+  .box2 {
+    position: absolute;
+    z-index:2;
+    top:125px;
+    font-size: 56px;
+    width: 800px;
+    opacity:0;
+    height: 100px;
+    left: px;
+    animation: leftTwo 3s ease-out 4s forwards;
+  }
+
+  .box3 {
+    position: absolute;
+    z-index:3;
+    top:200px;
+    font-size: 36px;
+    width: 200px;
+    opacity:0;
+    height: 100px;
+    right: -500px;
+    animation: rightOne 3s ease-out 7s forwards;
+  }
+
+  .box4 {
+    position: absolute;
+    z-index:4;
+    top:200px;
+    font-size: 36px;
+    width: 200px;
+    opacity:0;
+    height: 100px;
+    left: 800px;
+    animation: rightTwo 1.5s ease-out 9.5s forwards;
+  }
+  
+
+
+  @keyframes leftOne {
+
+    0% {
+      left:-300px;
+      opacity:0;
+      width:5000px;
+      top:100px;
+
+    }
+
+    25% {
+      left:50%;
+      opacity:0.5;
+      top:100px;
+
+    }
+
+    75% {
+      width:500px;
+      height:300px;
+      opacity: 1;
+      left:30%;
+      font-size: 96px;
+      top:100px;
+      
+    }
+
+
+    100% {
+      opacity: 0;
+      width:5000px;
+      top:-700px;
+      opacity:0;
+      left:-50%;
+      height:5000px;
+      font-size: 1200px;
+    }
+
+  
+
+  }
+
+
+  @keyframes leftTwo {
+
+    0% {
+      opacity: 0;
+      
+    }
+
+
+    50% {
+      opacity: 1;
+      
+    }
+
+
+    100% {
+      top:30px;
+      opacity:1;
+    }
+
+
+  }
+
+
+  @keyframes rightOne {
+
+    0%{
+      right:-500px;
+      opacity:0;
+    }
+
+    25%{
+      opacity:0.5;
+    }
+
+    75%{
+      right:500px;
+      opacity:1;
+    }
+
+    100%{
+      right:385px;
+      opacity:1;
+    }
+
+
+  }
+
+
+  @keyframes rightTwo {
+
+    0%{
+      opacity:0;
+      transform:scaleX(1)
+    }
+
+    10%{
+      transform:scaleX(-1)
+    }
+
+    20%{
+      transform:scaleX(1)
+    }
+
+    30%{
+      transform:scaleX(-1)
+    }
+
+    40%{
+      transform:scaleX(1)
+    }
+
+    50%{
+      transform:scaleX(-1)
+    }
+    60%{
+      transform:scaleX(1)
+    }
+    70%{
+      transform:scaleX(-1)
+    }
+    80%{
+      transform:scaleX(1)
+    }
+
+    90%{
+      transform:scaleX(-1)
+    }
+
+    100%{
+      opacity:1;
+      transform:scaleX(1)
+    }
+
+  }
